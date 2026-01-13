@@ -1,0 +1,552 @@
+@mixin bg($rasmlar) {
+  background-image: $rasmlar;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@mixin flexbox($flex, $direction, $justify, $align, $gap) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin gridbox {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@mixin ul-box {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+@mixin gridbox-2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 33px;
+}
+@mixin gridbox-3 {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 35px;
+}
+@mixin gridbox-4 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+.container {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.header-box {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.header-boxs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.close-btn {
+  background-image: url("./rasmlar/Group\ 2.svg");
+}
+.navbar {
+  @include gridbox;
+  transform: translateY(-350px);
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 30px;
+  transition: transform 0.6s linear;
+  background-color: #fefcf7;
+}
+.open {
+  transform: translateY(0px);
+}
+.header-boxs_btn {
+  @include bg(url("../rasmlar/btn-img.svg"));
+  width: 16px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+}
+.main-section {
+  padding-bottom: 120px;
+}
+.bg-img {
+  @include bg(url("../rasmlar/bg.png"));
+  border-radius: 10px;
+  padding: 100px 24px;
+  color: #fff;
+}
+.matnlar {
+  @include gridbox;
+}
+.matnlar-name {
+  color: #fefcf7;
+  font-weight: 900;
+  font-size: 40px;
+}
+.matlar-text {
+  color: #a9a7a3;
+  font-weight: 400;
+  font-size: 15px;
+}
+.matnlar-btn {
+  border: none;
+  border-radius: 6px;
+  background-color: #0e8784;
+  color: #fefcf7;
+  padding: 15px 25px;
+  width: 217px;
+  height: 56px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 18px;
+}
+.main-name {
+  color: #d7d7d6;
+  font-weight: 900;
+  font-size: 72px;
+  text-align: center;
+}
+.ikki-ul {
+  @include ul-box;
+  @include gridbox;
+  gap: 48px;
+}
+.ikki-ul_li {
+  width: 282px;
+  @include flexbox(flex, column, center, center, 16px);
+  margin: 0 auto;
+  text-align: center;
+}
+.ikki-ul_li__img {
+  width: 200px;
+}
+.box {
+  @include gridbox;
+}
+.ikki-ul_li__strong {
+  font-weight: 900;
+  font-size: 24px;
+  color: #333d4b;
+}
+.ikki-ul_li__text {
+  font-weight: 400;
+  font-size: 15px;
+  color: #333d4b;
+}
+.uch-section {
+  padding-bottom: 600px;
+}
+.katta-box {
+  background-color: #282f38;
+  border-radius: 10px;
+  position: relative;
+  padding-bottom: 600px;
+}
+.bola {
+  background-color: #2c343e;
+  padding: 64px 24px 28px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  @include gridbox;
+  color: #fefcf7;
+}
+.bola-name {
+  font-weight: 900;
+  font-size: 28px;
+}
+.bola-text {
+  font-weight: 400;
+  font-size: 15px;
+  color: #93969a;
+}
+.uch-ul {
+  position: absolute;
+  @include ul-box;
+  @include gridbox;
+  left: 28px;
+  top: 260px;
+}
+.uch-ul_li {
+  @include gridbox;
+  gap: 55px;
+  background-color: #0e8784;
+  padding: 72px 12px 51px;
+  border-radius: 8px;
+  width: 280px;
+  margin: 0 auto;
+}
+.bolas {
+  @include gridbox;
+  color: #fefcf7;
+}
+.uch-ul_li__img {
+  margin: 0 auto;
+}
+.bolas-str {
+  font-weight: 900;
+  font-size: 24px;
+}
+.bolas-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+.big-box {
+  @include gridbox;
+  gap: 80px;
+}
+.narsalar {
+  display: none;
+}
+.big-box-name {
+  font-weight: 900;
+  font-size: 24px;
+  color: #83888f;
+}
+.narsalar {
+  width: 467px;
+  border: 2px solid #fdd6ba;
+  position: relative;
+  margin-left: 12px;
+}
+.narsalar-span {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 2px solid #0e8784;
+  left: -15px;
+  top: -15px;
+  background-color: #fff;
+}
+.narsalar-spans {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 2px solid #0e8784;
+  top: -15px;
+  right: 210px;
+  background-color: #fff;
+}
+.narsalar-spanss {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 2px solid #0e8784;
+  left: 450px;
+  top: -15px;
+  background-color: #fff;
+}
+.tort-ul {
+  @include ul-box;
+  @include gridbox;
+  gap: 56px;
+}
+.tort-ul_li {
+  @include gridbox;
+}
+.tort-ul_li__name {
+  text-align: center;
+  font-weight: 900;
+  font-size: 72px;
+  color: #fdd6ba;
+}
+.child {
+  @include gridbox;
+  color: #333d4b;
+}
+.big-box_btn {
+  border: none;
+  border-radius: 6px;
+  width: 217px;
+  height: 56px;
+  background-color: #0e8784;
+  font-weight: 900;
+  font-size: 18px;
+  color: #fefcf7;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.big-box_btn:hover {
+  background-color: #fefcf7;
+  border: 1px solid #0e8784;
+  color: #0e8784;
+}
+.footer-box {
+  padding-bottom: 72px;
+}
+.footer-boxs {
+  @include gridbox;
+  gap: 48px;
+  background-color: #2c343e;
+  padding-block: 54px;
+}
+.list-box {
+  @include ul-box;
+  @include gridbox;
+}
+.list-box_li__site {
+  text-decoration-line: none;
+  font-weight: 700;
+  font-size: 12px;
+  color: #83888f;
+}
+.footer-ul {
+  @include ul-box;
+  @include flexbox(flex, row, center, center, 24px);
+}
+.footer-ul__li__btn {
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  @include bg(url("../rasmlar/facebook.svg"));
+  cursor: pointer;
+}
+.footer-ul__li__btns {
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  @include bg(url("../rasmlar/twitter.svg"));
+  cursor: pointer;
+}
+.footer-ul__li__btnss {
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  @include bg(url("../rasmlar/instagram.svg"));
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .header-boxs_btn {
+    display: none;
+  }
+  .header-nav {
+    display: block;
+  }
+  .list-box {
+    @include gridbox-2;
+  }
+  .bg-img {
+    padding: 0;
+    padding-block: 104px;
+    padding-left: 58px;
+  }
+  .matnlar {
+    text-align: start;
+    width: 400px;
+  }
+  .main-name {
+    position: absolute;
+    top: 630px;
+    left: 120px;
+  }
+  .matnlar-name {
+    font-size: 48px;
+  }
+  .matnlar-btn {
+    margin: 0;
+  }
+  .ikki-ul {
+    position: relative;
+  }
+  .ikki-ul_li {
+    @include gridbox-3;
+    width: 573px;
+  }
+  .ikki-ul_li__img {
+    width: 234px;
+  }
+  .box {
+    text-align: start;
+  }
+  .bola {
+    padding: 0;
+    padding: 54px 74px 70px;
+  }
+  .bola-name {
+    font-size: 32px;
+  }
+  .uch-section {
+    padding-bottom: 400px;
+  }
+  .uch-ul {
+    left: 80px;
+    top: 220px;
+  }
+  .uch-ul_li {
+    @include gridbox-3;
+    padding: 0;
+    padding: 41px 48px 41px 70px;
+    width: 573px;
+    gap: 55px;
+  }
+  .bolas {
+    text-align: start;
+  }
+  .big-box {
+    gap: 40px;
+    padding-left: 20px;
+    text-align: start;
+  }
+  .tort-ul {
+    gap: 10px;
+    @include gridbox-2;
+  }
+  .tort-ul_li {
+    gap: 40px;
+  }
+  .tort-ul_li__name {
+    text-align: start;
+  }
+  .ikkita {
+    @include gridbox;
+  }
+  .tort-ul_li:nth-child(2) {
+    padding-bottom: 20px;
+  }
+  .tort-ul_li:nth-child(3) {
+    padding-bottom: 20px;
+  }
+  .child {
+    gap: 40px;
+    text-align: start;
+  }
+  .big-box_btn {
+    margin: 0;
+  }
+  .bolas-str {
+    font-size: 28px;
+  }
+  .katta-box {
+    padding: 0;
+    padding-bottom: 300px;
+    background-color: #293039;
+  }
+  .bola {
+    background-color: #293039;
+  }
+}
+@media only screen and (min-width: 1320px) {
+  .bg-img {
+    padding: 0;
+    padding-block: 116px;
+    padding-left: 85px;
+  }
+  .matnlar {
+    width: 493px;
+  }
+  .matnlar-name {
+    font-size: 72px;
+  }
+  .matlar-text {
+    font-size: 16px;
+  }
+  .main-name {
+    font-size: 150px;
+    left: 230px;
+    top: 680px;
+  }
+  .ikki-ul {
+    @include gridbox-4;
+  }
+  .ikki-ul_li {
+    @include gridbox;
+    width: 255px;
+  }
+  .box {
+    text-align: center;
+  }
+  .ikki-ul_li__text {
+    font-size: 16px;
+  }
+  .katta-box {
+    padding: 0;
+    border-radius: 10px;
+  }
+  .bola {
+    padding: 0;
+    padding: 100px 370px 317px;
+  }
+  .uch-section {
+    padding: 0;
+    padding-bottom: 400px;
+  }
+  .uch-ul {
+    @include gridbox-2;
+    top: 290px;
+  }
+  .uch-ul_li {
+    width: 350px;
+    @include gridbox;
+    padding: 0;
+    padding: 72px 48px 48px;
+    gap: 56px;
+  }
+  .uch-ul_li:nth-child(3) {
+    padding: 0;
+    padding: 83px 48px 48px;
+  }
+  .bolas {
+    text-align: center;
+  }
+  .bolas-text {
+    font-size: 16px;
+  }
+  .narsalar {
+    width: 760px;
+  }
+  .narsalar-spans {
+    left: 380px;
+  }
+  .narsalar-spanss {
+    left: 750px;
+  }
+  .tort-ul_li:nth-child(2) {
+    padding-bottom: 25px;
+  }
+  .tort-ul_li:nth-child(3) {
+    padding-bottom: 25px;
+  }
+  .ikkita {
+    @include gridbox-3;
+    gap: 100px;
+  }
+  .footer-boxs {
+    @include gridbox-3;
+    gap: 380px;
+  }
+  .tort-ul_li__name {
+    text-align: start;
+  }
+  .big-box {
+    padding: 0;
+  }
+}
