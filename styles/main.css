@@ -462,8 +462,17 @@ body {
   .header-boxs_btn {
     display: none;
   }
+  .header-box {
+    position: static;
+  }
   .header-nav {
-    display: block;
+    z-index: 0;
+    transform: none;
+    padding-bottom: 0;
+    transition: none;
+    position: static;
+    background-color: transparent;
+    width: 290px;
   }
   .list-box {
     display: grid;
